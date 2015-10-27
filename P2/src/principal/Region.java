@@ -13,6 +13,9 @@ public class Region {
     
     public double getArea()
     {
-        
+        !
+    }
+    public void draw(java.awt.Graphics g){
+        !
     }
 }

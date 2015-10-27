@@ -9,6 +9,13 @@ package principal;
  *
  * @author drako9
  */
-public class City {
+public class City extends GeoPoint{
     
+    private int numhab;
+    
+    City(float xi , float yi , String n , int hab)
+    {
+        super(xi,yi,n);
+        numhab = hab;
+    }
 }

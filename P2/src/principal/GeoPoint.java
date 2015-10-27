@@ -17,4 +17,8 @@ public class GeoPoint extends Point{
         super(xi,yi);
         name = n;
     }
+    
+    public void draw(java.awt.Graphics g){
+        !!
+    }
 }

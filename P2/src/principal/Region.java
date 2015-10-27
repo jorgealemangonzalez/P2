@@ -11,4 +11,8 @@ package principal;
  */
 public class Region {
     
+    public double getArea()
+    {
+        
+    }
 }

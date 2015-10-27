@@ -14,5 +14,11 @@ import java.util.LinkedList;
 public class Country extends PolygonalRegion{
     private String name;
     private LinkedList<City> cities;
+    private LinkedList<Country> neighbors;
+    private City capital;
     
+    Country(LinkedList<Point> I, City c){
+        super(I);
+        cities.add(c);        
+    }
 }

@@ -14,7 +14,7 @@ import java.util.LinkedList;
 public class PolygonalRegion extends Region {
     protected LinkedList<Point> points;
     
-    public void PolygonalRegion( LinkedList<Point> I ){
+    PolygonalRegion( LinkedList<Point> I ){
        points=I;
     }
     

@@ -5,10 +5,14 @@
  */
 package principal;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author drako9
  */
-public class Country {
+public class Country extends PolygonalRegion{
+    private String name;
+    private LinkedList<City> cities;
     
 }

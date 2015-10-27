@@ -30,7 +30,7 @@ public class MyMap extends javax.swing.JPanel {
         super.paint( g );
         for(int i = 0 ; i < cities.size() ; ++i)
         {
-            
+            cities.get(i).draw(g);
         }
     }
     

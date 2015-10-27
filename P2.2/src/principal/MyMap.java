@@ -22,8 +22,10 @@ public class MyMap extends javax.swing.JPanel {
         initComponents();
         setSize( 500, 500 );
         cities = new LinkedList< City >();
-        cities.add( new City( 100, 200, "Madrid", 4000000 ) );
-        cities.add( new City( 200, 100, "Barcelona", 2000000 ) );
+        cities.add( new City( 100, 200, "A1", 4000000 ) );
+        cities.add( new City( 200, 100, "A2", 2000000 ) );
+        cities.add( new City( 200, 100, "A3", 2000000 ) );
+        cities.add( new City( 200, 100, "A4", 2000000 ) );
     }
     
     public void paint( java.awt.Graphics g ) {

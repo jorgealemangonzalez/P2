@@ -21,4 +21,22 @@ public class Country extends PolygonalRegion{
         super(I);
         cities.add(c);        
     }
+    
+    public void addCity(City c){
+        
+        cities.add(c);
+    }
+    
+    public void addNeighbor(Country c){
+        
+        neighbors.add(c);
+    }
+    
+    public void draw(java.awt.Graphics g){
+        super.draw(g);
+        for(int i = 0 ; i < cities.size() ; ++i)
+        {
+            cities.get(i).draw(g);
+        }
+    }
 }

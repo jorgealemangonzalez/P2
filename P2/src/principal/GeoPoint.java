@@ -9,6 +9,12 @@ package principal;
  *
  * @author drako9
  */
-public class GeoPoint {
+public class GeoPoint extends Point{
+    protected String name;
     
+    GeoPoint(float xi , float yi , String n)
+    {
+        super(xi,yi);
+        name = n;
+    }
 }

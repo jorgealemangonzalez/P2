@@ -9,12 +9,6 @@ package principal;
  *
  * @author drako9
  */
-public class Point {
-    protected float x , y;
+public class Map {
     
-    Point(float xi , float yi)
-    {
-        x = xi;
-        y = yi;
-    }
 }

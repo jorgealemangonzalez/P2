@@ -17,24 +17,36 @@ public class MyMap extends javax.swing.JPanel {
      * Creates new form MyMap
      */
     private LinkedList< City > cities;
+    private LinkedList< Point> points;
+    private PolygonalRegion prova;
     
     public MyMap() {
         initComponents();
         setSize( 500, 500 );
-        cities = new LinkedList< City >();
+        cities = new LinkedList<  >();
         cities.add( new City( 100, 200, "A1", 4000000 ) );
-        cities.add( new City( 200, 100, "A2", 2000000 ) );
-        cities.add( new City( 200, 100, "A3", 2000000 ) );
-        cities.add( new City( 200, 100, "A4", 2000000 ) );
-    }
+        cities.add( new City( 200, 150, "A2", 2000000 ) );
+        cities.add( new City( 201, 100, "A3", 2000000 ) );
+        cities.add( new City( 150, 120, "A4", 2000000 ) ); 
+        points = new LinkedList <  >() ;
+        points.add( new Point(60,0));
+        points.add( new Point(60,220));
+        points.add( new Point(250,220));
+        points.add( new Point(250,0));
+        prova = new PolygonalRegion(points);
+          
+        
+}
     
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
+        prova.draw(g);
         for(int i = 0 ; i < cities.size() ; ++i)
         {
             cities.get(i).draw(g);
         }
     }
+   
     
     /**
      * This method is called from within the constructor to initialize the form.

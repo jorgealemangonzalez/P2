@@ -24,18 +24,7 @@ public class MyMap extends javax.swing.JPanel {
         initComponents();
         setSize( 500, 500 );
         cities = new LinkedList<  >();
-        cities.add( new City( 100, 200, "A1", 4000000 ) );
-        cities.add( new City( 200, 150, "A2", 2000000 ) );
-        cities.add( new City( 201, 100, "A3", 2000000 ) );
-        cities.add( new City( 150, 120, "A4", 2000000 ) ); 
-        points = new LinkedList <  >() ;
-        points.add( new Point(60,0));
-        points.add( new Point(60,220));
-        points.add( new Point(250,220));
-        points.add( new Point(250,0));
-        prova = new PolygonalRegion(points);
-          
-        
+    
 }
     
     public void paint( java.awt.Graphics g ) {

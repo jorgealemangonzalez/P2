@@ -17,6 +17,7 @@ public class MyMap extends javax.swing.JPanel {
      * Creates new form MyMap
      */
     private LinkedList< City > cities;
+<<<<<<< HEAD
     private LinkedList< Country > countries;
     public MyMap() {
         initComponents();
@@ -50,14 +51,27 @@ public class MyMap extends javax.swing.JPanel {
             countries.add(new Country(new LinkedList<>(cities.subList((i-1)*4,i*4-1)),cities.get(i*4-1)));
         }*/
     }
+=======
+    private LinkedList< Point> points;
+    private PolygonalRegion prova;
+    
+    public MyMap() {
+        initComponents();
+        setSize( 500, 500 );
+        cities = new LinkedList<  >();
+    
+}
+>>>>>>> c160d683b237f35dae2a7e60f3f28606aae34889
     
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
+        prova.draw(g);
         for(int i = 0 ; i < cities.size() ; ++i)
         {
             cities.get(i).draw(g);
         }
     }
+   
     
     /**
      * This method is called from within the constructor to initialize the form.

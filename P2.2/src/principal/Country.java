@@ -18,8 +18,8 @@ public class Country extends PolygonalRegion{
     private City capital;
     
     Country(LinkedList<Point> I, City c){
-        super(I);
-        cities.add(c);        
+        super(I); // Forma del pais ( no son citys )
+        capital = c;       
     }
     
     public void addCity(City c){

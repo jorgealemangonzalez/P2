@@ -17,15 +17,38 @@ public class MyMap extends javax.swing.JPanel {
      * Creates new form MyMap
      */
     private LinkedList< City > cities;
-    
+    private LinkedList< Country > countries;
     public MyMap() {
         initComponents();
         setSize( 500, 500 );
         cities = new LinkedList< City >();
-        cities.add( new City( 100, 200, "A1", 4000000 ) );
-        cities.add( new City( 200, 100, "A2", 2000000 ) );
-        cities.add( new City( 200, 100, "A3", 2000000 ) );
-        cities.add( new City( 200, 100, "A4", 2000000 ) );
+        cities.add( new City( 10, 10, "A1", 4000000 ) );
+        cities.add( new City( 10, 30, "A2", 2000000 ) );
+        cities.add( new City( 30, 30, "A3", 2000000 ) );
+        cities.add( new City( 30, 10, "A4", 2000000 ) );
+        
+        cities.add( new City( 50, 10, "B1", 4000000 ) );
+        cities.add( new City( 50, 30, "B2", 2000000 ) );
+        cities.add( new City( 70, 30, "B3", 2000000 ) );
+        cities.add( new City( 70, 10, "B4", 2000000 ) );
+        
+        
+        cities.add( new City( 100, 100, "C1", 4000000 ) );
+        cities.add( new City( 100, 120, "C2", 2000000 ) );
+        cities.add( new City( 120, 120, "C3", 2000000 ) );
+        cities.add( new City( 120, 100, "C4", 2000000 ) );
+        
+        cities.add( new City( 150, 150, "D1", 4000000 ) );
+        cities.add( new City( 150, 170, "D2", 2000000 ) );
+        cities.add( new City( 170, 170, "D3", 2000000 ) );
+        cities.add( new City( 170, 150, "D4", 2000000 ) );
+        
+        /*
+        countries = new LinkedList<Country>();
+        for(int i = 1 ; i <= 4 ; ++i)
+        {
+            countries.add(new Country(new LinkedList<>(cities.subList((i-1)*4,i*4-1)),cities.get(i*4-1)));
+        }*/
     }
     
     public void paint( java.awt.Graphics g ) {

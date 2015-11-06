@@ -14,7 +14,9 @@ import java.util.LinkedList;
 public class World {
     private  LinkedList<Continent> cons;
     
-    World(){}
+    World(){
+        cons  = new LinkedList<>();
+    }
     
     public void addContinent(Continent c)
     {

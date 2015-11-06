@@ -17,7 +17,10 @@ public class MyMap extends javax.swing.JPanel {
      * Creates new form MyMap
      */
     private LinkedList< City > cities;
+    private LinkedList< Point > puntos;
     private LinkedList< Country > countries;
+    private LinkedList< Continent > continents;
+    private World world;
     public MyMap() {
         initComponents();
         setSize( 500, 500 );
@@ -43,12 +46,35 @@ public class MyMap extends javax.swing.JPanel {
         cities.add( new City( 170, 170, "D3", 2000000 ) );
         cities.add( new City( 170, 150, "D4", 2000000 ) );
         
-        /*
-        countries = new LinkedList<Country>();
+        
+        puntos = new LinkedList< >();
+        for(int i = 0 ; i < cities.size(); ++i)
+        {
+            puntos.add((Point)cities.get(i));
+        }
+        
+        countries = new LinkedList<>();
         for(int i = 1 ; i <= 4 ; ++i)
         {
-            countries.add(new Country(new LinkedList<>(cities.subList((i-1)*4,i*4-1)),cities.get(i*4-1)));
-        }*/
+            //en la siguiente linea introducimos los perimetros de los countries y la capital
+            countries.add(new Country(new LinkedList<>(puntos.subList((i-1)*4,i*4)),cities.get(i*4-1)));
+            //ahora introducimos las ciudades
+            for(int j = 0 ; j < 4 ; ++j)
+            {
+                countries.get(i-1).addCity(cities.get((i-1)*4+j));
+            }
+        }
+        continents = new LinkedList<>();
+        for(int i = 0 ; i < 2 ; ++i)
+        {
+            continents.add(new Continent());
+            continents.get(i).addCountry(countries.get(i*2));
+            continents.get(i).addCountry(countries.get(i*2+1));
+        }
+        world = new World();
+        world.addContinent(continents.get(0));
+        world.addContinent(continents.get(1));
+        
     }
     private LinkedList< Point> points;
     private PolygonalRegion prova;
@@ -56,11 +82,22 @@ public class MyMap extends javax.swing.JPanel {
     
     public void paint( java.awt.Graphics g ) {
         super.paint( g );
-        prova.draw(g);
+        /* Impresion de las ciudades por separado
         for(int i = 0 ; i < cities.size() ; ++i)
         {
             cities.get(i).draw(g);
-        }
+        }*/
+        /* Impresion de los countries con sus ciudades y perimetro
+        for(int i = 0 ; i < countries.size() ; ++i)
+        {
+            countries.get(i).draw(g);
+        }*/
+        /* Impresion de los continentes y sus paises
+        for(int i = 0 ; i < continents.size(); ++i)
+        {
+            continents.get(i).draw(g);
+        }*/
+        world.draw(g);
     }
    
     

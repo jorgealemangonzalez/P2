@@ -14,11 +14,13 @@ import java.util.LinkedList;
 public class Country extends PolygonalRegion{
     private String name;
     private LinkedList<City> cities;
-    private LinkedList<Country> neighbors;
+    private LinkedList<Country> neighbors ;
     private City capital;
     
     Country(LinkedList<Point> I, City c){
         super(I); // Forma del pais ( no son citys )
+        cities  = new LinkedList<>();
+        neighbors  = new LinkedList<>();
         capital = c;       
     }
     
